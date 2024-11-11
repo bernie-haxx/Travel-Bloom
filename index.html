@@ -4,35 +4,43 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Travy - TravelBloom</title>
-        <link rel="stylesheet" href="travel_recommendation.css">
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
-        <div class="container">
-            <div class="logo">
-                <img src="plane.png" alt="Logo">
+        <nav>
+            <div class="items travel">
                 <h1>TravelBloom</h1>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./aboutus.html">About us</a></li>
-                    <li><a href="./contactus.html">Contact Us</a></li>
-                </ul>
-            </nav>
-            <div class="search-box">
-                <input type="text" placeholder="Enter a destination beyound" id="search">
-                <button type="submit" id="btnSearch">Search</button>
-                <button type="submit" id="btnClear">Clear</button>
+            
+            <ul class="items nav-links">
+                <li>
+                    <a href="./index.html" id="home">Home </a>
+                </li>
+                <li>
+                    <a href="./about.html" id="home">About Us</a>
+                </li>
+                <li>
+                    <a href="./contact.html" id="home">Contact Us </a>
+                </li>
+            </ul>
+
+            <div class="items search-bar">
+                <input type="text" placeholder="Enter a destination or keyword"/>
+                <i class="fas fa-search"></i>
+                <button>Search</button>
+                <button>Clear</button>
             </div>
-        </div>
-        <main>
+        </nav>
+        <aside>
             <div class="social-icons">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
-    
+        </aside>
+        <main>
             <div class="explore">
                 <h1>EXPLORE DREAM DESTINATION</h1>
                 <p>It encourages exploration of unfimilar territories embracing diverse cultures and landscapes while
@@ -43,7 +51,6 @@
             <div class="searchCondition">
                 <div id="result"></div>
             </div>
-    
         </main>
     
         <script src="./travel_Recommendation.js"></script>
