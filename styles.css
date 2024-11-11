@@ -10,7 +10,7 @@
 body {
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 50px 1fr;
+    grid-template-columns: 150px 1fr;
     grid-template-rows: auto 2fr;
     grid-template-areas: 
         "navbar navbar"
@@ -105,9 +105,57 @@ input:placeholder-shown {
 /* Aside Values */
 aside {
     grid-area: aside;
+    padding-top: 4rem;
 }
 
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons a {
+    padding: 1.5rem;
+    /* column-gap: 1.5rem; */
+    color: white;
+    font-size: 30px;
+}
+.solid-line {
+    border-left: 3px solid whitesmoke;
+    height: 250px;
+    
+  }
+
+  .solid-line-div {
+    padding: 5rem;
+  }
 /* Main Content Values */
 main {
     grid-area: main;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: white;
+}
+
+main h1 {
+    font-size: 100px;
+    padding: 1rem;
+}
+
+main p {
+    padding: 1rem;
+    padding-bottom: 5rem;
+    font-size: 25px;
+    font-weight: 100;
+}
+main button {
+    background-color: #01696b;
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    overflow: hidden;
+    font-weight: bolder;
+    border-style: none;
+    align-self: center;
 }
