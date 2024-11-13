@@ -94,12 +94,19 @@ font-weight: bold;
 .search-bar i {
     color: #01696b;
 }
-.search-bar > button {
+.search-bar  button {
     background-color: #01696b;
     color: white;
     padding: 0.5rem;
     border-radius: 10px;
     overflow: hidden;
+    transition: smooth;
+    transition-delay: 5ms;
+}
+
+.search-bar button:hover {
+    background-color: blue;
+    
 }
 
 /* Aside Values */
