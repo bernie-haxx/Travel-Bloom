@@ -85,7 +85,7 @@ font-weight: bold;
     overflow: hidden;
 }
 
-input:placeholder-shown {
+.search-bar input:placeholder-shown {
     text-overflow: ellipsis;
     width: 200px;
     border-style: none;
@@ -129,8 +129,9 @@ aside {
   .solid-line-div {
     padding: 5rem;
   }
-/* Main Content Values */
-main {
+
+/* Home Page Values */
+#home {
     grid-area: main;
     display: flex;
     align-items: center;
@@ -138,18 +139,19 @@ main {
     color: white;
 }
 
-main h1 {
+#home h1 {
     font-size: 100px;
     padding: 1rem;
 }
 
-main p {
+#home p {
     padding: 1rem;
     padding-bottom: 5rem;
     font-size: 25px;
     font-weight: 100;
 }
-main button {
+
+#home button {
     background-color: #01696b;
     color: white;
     padding: 1rem 3rem;
@@ -158,4 +160,140 @@ main button {
     font-weight: bolder;
     border-style: none;
     align-self: center;
+}
+
+/* About Page Values */
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2rem;
+    flex-wrap: wrap;
+    column-gap: 10em;
+}
+
+.about h1 {
+    font-size: 80px;
+    padding: 2rem;
+}
+.opacity {
+    background-color: rgba(255,255,255,0.5);
+    align-self: stretch;
+}
+
+.op-message {
+    width: 100%;
+    align-self: flex-end !important;
+    justify-self: start !important;
+    margin-bottom: 100px;
+
+}
+.opacity p {
+    padding: 1rem;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+/* Team Section with Card specification */
+.team {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: end;
+}
+
+.card {
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-end;
+    padding: 1.5rem;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+}
+
+.card h2 {
+    justify-content: center;
+}
+
+.card  img {
+    max-width: 75px;
+    max-height: 75px;
+}
+
+.card p {
+    padding: 0 !important;
+    font-size: small;
+}
+
+.card button {
+    border-color: white;
+    border: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    border-radius: 10px;
+    margin: 0.5rem;
+    overflow: hidden;
+    width:fit-content;
+}
+
+/* Contact Page Values */
+.contact {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "contact-context contact-form";
+}
+
+.contact-context {
+    grid-area: contact-context;
+}
+.contact-context h1 {
+    font-size: 100px;
+}
+
+.contact-context p {
+    font-size: large;
+}
+.contact-form {
+    grid-area: contact-form;
+    max-width: 800px;
+    
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: start;
+    justify-content: stretch;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.5rem;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.contact-form form input:placeholder-shown {
+    border-color: white;
+    opacity: 0.6;
+    padding: 0.5rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#message-text-area {
+    align-self: start;
+    border-color: white;
+    opacity: 0.6;
+
+}
+
+.contact-form form button {
+    background: #01696b;
+    border-color: transparent;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
 }
