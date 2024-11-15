@@ -12,12 +12,12 @@ This is a travel Recommendation Website created for the IBM Skills Network Cours
 - JavaScript
 
 ## Features Required
-- Destination Search: Easily search a destination by entering keywords and destination name.
+- **Destination Search**: Easily search a destination by entering keywords and destination name.
     - Keywords available (beach, country, temple)
     - Via destination name, city name or country name (recorded in the [json](./travel_recommendation_api.json) file)
-- Personalized Recommendations: Get personalized travel recommendations based on your search.
-- Advice: Contact Page for expert advice.
-- Social Media Integration: Linking to various social media platforms.
+- **Personalized Recommendations**: Get personalized travel recommendations based on your search.
+- **Advice**: Contact Page for expert advice.
+- **Social Media Integration**: Linking to various social media platforms.
 
 ## How To Use
 1. Clone repository to your local machine
@@ -42,6 +42,8 @@ Content for each item recommended below each feature.
     - [Rachel Andrew Article on Media Queries](https://www.smashingmagazine.com/2018/02/media-queries-responsive-design-2018/)
 
 - Contact Page Implementation
+- Social Media Intergration Links
+- Animation for the Search Recommendations
 
 ## Contributors
 
