@@ -2,6 +2,8 @@ const searchButton = document.getElementById("searchBtn");
 var searchList = [];
 const resultDiv = document.getElementById("result");
 const searchInputArea = document.getElementById("searchInput");
+const clearBtn = document.getElementById("btnClear");
+
 
 // Search Destination and keyword
 function searchDestination() {
@@ -114,6 +116,7 @@ function clearResult () {
     resultDiv.classList.replace("hide", "show");
     resultDiv.innerHTML = "";
 }
+
 // To singularize a word if it not found in the JSON Data.
 function singularize(word) {
     const endings = {
@@ -141,3 +144,4 @@ searchInputArea.addEventListener("keypress", (e) => {
 
 // On Click Event Listeners
 searchButton.addEventListener("click", searchDestination);
+clearBtn.addEventListener("click", clearResult);
