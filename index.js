@@ -39,11 +39,12 @@ function lookUp(array, input) {
         } else {
           // Return Destination per city input
           value.forEach(element => {
+            // Check Input via country
             if (element.name.toLowerCase().includes(input)) {
                 console.log(element);
                 searchList += element;
+            // Check input via city name and make sure isn't undefined
             } else if (element.cities) {
-                // console.log(element.cities.some((i) => i.name.toLowerCase().includes(input)));
                 if (element.cities.some((i) => i.name.toLowerCase().includes(input))) {
                     searchList += element.cities.find((item) => item.name.toLowerCase().includes(input));
                 }
