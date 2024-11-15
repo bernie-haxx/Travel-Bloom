@@ -132,5 +132,12 @@ function singularize(word) {
     );
 }
 
+// Adding event Listener when the enter key is added
+searchInputArea.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+        searchDestination();
+    }
+});
 
+// On Click Event Listeners
 searchButton.addEventListener("click", searchDestination);
