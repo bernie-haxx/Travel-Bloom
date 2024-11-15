@@ -11,47 +11,42 @@ This is a travel Recommendation Website created for the IBM Skills Network Cours
 - CSS
 - JavaScript
 
+## Features Required
+- Destination Search: Easily search a destination by entering keywords and destination name.
+    - Keywords available (beach, country, temple)
+    - Via destination name, city name or country name (recorded in the [json](./travel_recommendation_api.json) file)
+- Personalized Recommendations: Get personalized travel recommendations based on your search.
+- Advice: Contact Page for expert advice.
+- Social Media Integration: Linking to various social media platforms.
+
+## How To Use
+1. Clone repository to your local machine
+2. Open your `index.html` to your web browser of your choosing
+3. Explore the site
+
 ## Tasks Done
-- Task 1: HTML template
-    - Create a basic HTML template structure in the travel_recommendation.html file
-    - Named it as index.html
-- Task 2: Navbar
-    ![nav-bar](./images/nav_bar.png)
-    - Created a navbar with the following format:
-        - Home page link using anchor tag `<a>` to navigate to home page
-        - About us page link using anchor tag `<a>` to navigate to about us page
-        - Contact Us page link using anchor tag `<a>` to navigate to contact us page
-        - A search bar to allow users to enter keywords to search for recommendations
-        - A Search button to execute the search after the user clicks on it
-        - A Reset button to clear results.
-- Task 3: Home page
-    ![home-page](./images/home_page.png)
-    - A background image
-    - An introduction to this website
-- Task 4: About us
-![about-page](./images/about.png)
-    - Information about the company
-    - An introduction to the team members, displaying their names and their designated roles
-- Task 5: Contact us
-![contact-page](./images/contact.png)
-    - A form for users in case they want to reach out
-    - The form should contain:
-        - `<input>` boxes for name and email
-        - `<textarea>` for users to write their message
-        - Submit button to submit the form
-- Task 6: Recommendation results
-    - Searches through [travel_recommendation_api.json](./travel_recommendation_api.json)
-    - Using the fetch() API from Javascript
-        - Uses Promises which are Asynchronous Objects.
-- Task 7: Search Through Keywords and Recommendations
-    - Uses the JSON from the fetch() API and displays the following results"
-        - Through country:
-        ![country-input](./images/country.png)
-        - Through beach:
-        ![beach-input](./images/beaches.png)
-        - Through temple:
-        ![temple-input](./images/temple.png)
-        - Through country name:
-        ![japan-input](./images/japan.png)
-        - Through `any destination` name:
-        ![any-input](./images/any.png)
+Tasks done are recorded [here](./TASKS.md).
+
+## Resources Used
+
+- [CSS-tricks Grid](https://css-tricks.com/css-masonry-css-grid/)
+- [Flex Zombies](https://mastery.games/flexboxzombies/chapter/2/level/4)
+- [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+
+## Features Not Done
+Would be helpful to implement this features.
+Content for each item recommended below each feature.
+
+- Media Queries for responsiveness
+    - [CSS-tricks Media Queries](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
+    - [Rachel Andrew Article on Media Queries](https://www.smashingmagazine.com/2018/02/media-queries-responsive-design-2018/)
+
+- Contact Page Implementation
+
+## Contributors
+
+Ben Karanja - [bernie_haxx](https://github.com/bernie-haxx)
+
+## Feedback
+
+If you have any feedback, suggestions, or issues with the application, please feel free to [open an issue](https://github.com/bernie-haxx/Travel-Bloom/issues). We welcome contributions and collaboration to make Travel Bloom even better!
