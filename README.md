@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a travel Recommendation created from the IBM Skills Network Course: JavaScript Essentials.
+This is a travel Recommendation Website created for the IBM Skills Network Course: JavaScript Essentials Final Project.
 
 ![home-page](./images/home_page.png)
 
@@ -21,3 +21,7 @@ This is a travel Recommendation created from the IBM Skills Network Course: Java
 - Task 3: Home page
     - A background image
     - An introduction to this website
+- Task 4: About us
+    - Information about the company
+    - An introduction to the team members, displaying their names and their designated roles
+- 
