@@ -304,3 +304,16 @@ aside {
     border-radius: 5px;
     padding: 0.5rem 1rem;
 }
+
+/* Search Condition values */
+.hide {
+    display: none;
+}
+
+.show {
+    display: relative;
+}
+#result img {
+    max-width: 200px;
+    max-height: 200px;
+}

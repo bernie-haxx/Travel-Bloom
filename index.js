@@ -1,11 +1,11 @@
 const searchButton = document.getElementById("searchBtn");
-var searchList = {};
+var searchList = [];
+const resultDiv = document.getElementById("result");
 
 // Search Destination and keyword
 function searchDestination() {
     // Retrieve values frome the input
     const searchText = document.getElementById("searchInput").value.toLowerCase();
-    const resultDiv = document.getElementById("result");
     resultDiv.innerHTML = "";
 
     fetch("travel_recommendation_api.json")
@@ -57,11 +57,11 @@ function lookUp(array, input) {
           value.forEach(element => {
             // Check Input via country
             if (element.name.toLowerCase().includes(input)) {
-                searchList = element;
+                searchList.push(element);
             // Check input via city name and make sure isn't undefined
             } else if (element.cities) {
                 if (element.cities.some((i) => i.name.toLowerCase().includes(input))) {
-                    searchList = element.cities.find((item) => item.name.toLowerCase().includes(input));
+                    searchList.push(element.cities.find((item) => item.name.toLowerCase().includes(input)));
                 }
                 
             }
@@ -74,13 +74,23 @@ function lookUp(array, input) {
     return searchList;
 };
 
+// Display the results of the search Input.
 function displayResult(destination) {
     if (destination) {
-        let [ref, obj] = destination.split(",");
-        console.log(ref);
-        console.dir(obj);
-        console.log(obj);
-    }
+        for (dest of destination) {
+            // If it's a collection of cities
+            if (dest.cities) {
+                dest.cities.forEach((city) => {
+                    resultDiv.classList.replace("hide", "show");
+                    resultDiv.innerHTML += `<img src ="${city.imageUrl}" alt="${city.name}"/>`;
+                })
+            } else {
+                resultDiv.classList.replace("hide", "show");
+                resultDiv.innerHTML += `<img src ="${dest.imageUrl}" alt="${dest.name}"/>`;
+            }
+            
+        }
+    };
 }
 // To singularize a word if it not found in the JSON Data.
 function singularize(word) {
