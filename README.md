@@ -36,3 +36,17 @@ This is a travel Recommendation Website created for the IBM Skills Network Cours
         - Submit button to submit the form
 - Task 6: Recommendation results
     - Searches through [travel_recommendation_api.json](./travel_recommendation_api.json)
+    - Using the fetch() API from Javascript
+        - Uses Promises which are Asynchronous Objects.
+- Task 7: Search Through Keywords and Recommendations
+    - Uses the JSON from the fetch() API and displays the following results"
+        - Through country:
+        ![country-input](./images/country.png)
+        - Through beach:
+        ![beach-input](./images/beaches.png)
+        - Through temple:
+        ![temple-input](./images/temple.png)
+        - Through country name:
+        ![japan-input](./images/beaches.png)
+        - Through `any destination` name:
+        ![any-input](./images/beaches.png)
