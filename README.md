@@ -11,6 +11,7 @@ This is a travel Recommendation Website created for the IBM Skills Network Cours
     - Create a basic HTML template structure in the travel_recommendation.html file
     - Named it as index.html
 - Task 2: Navbar
+    ![nav-bar](./images/navbar.png)
     - Created a navbar with the following format:
         - Home page link using anchor tag `<a>` to navigate to home page
         - About us page link using anchor tag `<a>` to navigate to about us page
@@ -19,9 +20,19 @@ This is a travel Recommendation Website created for the IBM Skills Network Cours
         - A Search button to execute the search after the user clicks on it
         - A Reset button to clear results.
 - Task 3: Home page
+    ![home-page](./images/home_page.png)
     - A background image
     - An introduction to this website
 - Task 4: About us
+![about-page](./images/about.png)
     - Information about the company
     - An introduction to the team members, displaying their names and their designated roles
-- 
+- Task 5: Contact us
+![contact-page](./images/contact.png)
+    - A form for users in case they want to reach out
+    - The form should contain:
+        - `<input>` boxes for name and email
+        - `<textarea>` for users to write their message
+        - Submit button to submit the form
+- Task 6: Recommendation results
+    - Searches through [travel_recommendation_api.json](./travel_recommendation_api.json)
