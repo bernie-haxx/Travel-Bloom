@@ -78,31 +78,31 @@ function lookUp(array, input) {
 };
 
 // Display the results of the search Input.
-function displayResult(destination) {
+function displayResult (destination) {
     if (destination) {
         resultDiv.innerHTML += `<div class="dest-card" style="background: #01696b;"></div>`;
-        console.log(destination);
+        
         for (dest of destination) {
             // If it's a collection of cities
             if (dest.cities) {
                 dest.cities.forEach((city) => {
-                    console.log(city);
                     resultDiv.classList.replace("hide", "show");
                     resultDiv.innerHTML += `<div class="dest-card">
                                                 <img src ="${city.imageUrl}" alt="${city.name}"/>
                                                 <h3>${city.name}</h3>
                                                 <p>${city.description}</p>
+                                                <p>Current Time is:${timezoneIdentifier(city.timeZone)}</p>
                                                 <button>Visit</button>
                                             </div>`;
                 });
                 return;
             } else {
-                console.log(dest);
                 resultDiv.classList.replace("hide", "show");
                 resultDiv.innerHTML += `<div class="dest-card">
                                                 <img src ="${dest.imageUrl}" alt="${dest.name}"/>
                                                 <h3>${dest.name}</h3>
                                                 <p>${dest.description}</p>
+                                                <p>Current Time is:${timezoneIdentifier(dest.timeZone)}</p>
                                                 <button>Visit</button>
                                             </div>`;
             }
@@ -118,7 +118,7 @@ function clearResult () {
 }
 
 // To singularize a word if it not found in the JSON Data.
-function singularize(word) {
+function singularize (word) {
     const endings = {
         ves: 'fe',
         ies: 'y',
@@ -135,6 +135,12 @@ function singularize(word) {
     );
 }
 
+// Indentifying the Time in the current time Zone
+function timezoneIdentifier (input) {
+    // Custom option values
+    const option = { timeZone: input, hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
+    return new Date().toLocaleTimeString("en-US", option);
+}
 // Adding event Listener when the enter key is added
 searchInputArea.addEventListener("keypress", (e) => {
     if (e.key === "Enter") {
@@ -145,3 +151,5 @@ searchInputArea.addEventListener("keypress", (e) => {
 // On Click Event Listeners
 searchButton.addEventListener("click", searchDestination);
 clearBtn.addEventListener("click", clearResult);
+
+
