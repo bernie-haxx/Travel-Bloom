@@ -23,6 +23,9 @@ function searchDestination() {
             // Value Checker
             if (searchText.length == 0) {
                 console.log("Please Insert Text");
+                resultDiv.innerHTML += `<div class="dest-card">
+                                            <p>Enter a valid Destination</p>
+                                        </p>`;
                 return;
             }
 
@@ -35,6 +38,9 @@ function searchDestination() {
                 searchList = [];
             } else {
                 console.log("Enter a valid Destination");
+                resultDiv.innerHTML += `<div class="dest-card">
+                                            <p>Destination or Keyword Not Found</p>
+                                        </p>`;
                 return;
             }
             
