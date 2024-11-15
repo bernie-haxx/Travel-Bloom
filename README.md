@@ -11,7 +11,7 @@ This is a travel Recommendation Website created for the IBM Skills Network Cours
     - Create a basic HTML template structure in the travel_recommendation.html file
     - Named it as index.html
 - Task 2: Navbar
-    ![nav-bar](./images/navbar.png)
+    ![nav-bar](./images/nav_bar.png)
     - Created a navbar with the following format:
         - Home page link using anchor tag `<a>` to navigate to home page
         - About us page link using anchor tag `<a>` to navigate to about us page
