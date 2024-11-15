@@ -1,6 +1,7 @@
 const searchButton = document.getElementById("searchBtn");
 var searchList = [];
 const resultDiv = document.getElementById("result");
+const searchInputArea = document.getElementById("searchInput");
 
 // Search Destination and keyword
 function searchDestination() {
@@ -77,20 +78,41 @@ function lookUp(array, input) {
 // Display the results of the search Input.
 function displayResult(destination) {
     if (destination) {
+        resultDiv.innerHTML += `<div class="dest-card" style="background: #01696b;"></div>`;
+        console.log(destination);
         for (dest of destination) {
             // If it's a collection of cities
             if (dest.cities) {
                 dest.cities.forEach((city) => {
+                    console.log(city);
                     resultDiv.classList.replace("hide", "show");
-                    resultDiv.innerHTML += `<img src ="${city.imageUrl}" alt="${city.name}"/>`;
-                })
+                    resultDiv.innerHTML += `<div class="dest-card">
+                                                <img src ="${city.imageUrl}" alt="${city.name}"/>
+                                                <h3>${city.name}</h3>
+                                                <p>${city.description}</p>
+                                                <button>Visit</button>
+                                            </div>`;
+                });
+                return;
             } else {
+                console.log(dest);
                 resultDiv.classList.replace("hide", "show");
-                resultDiv.innerHTML += `<img src ="${dest.imageUrl}" alt="${dest.name}"/>`;
+                resultDiv.innerHTML += `<div class="dest-card">
+                                                <img src ="${dest.imageUrl}" alt="${dest.name}"/>
+                                                <h3>${dest.name}</h3>
+                                                <p>${dest.description}</p>
+                                                <button>Visit</button>
+                                            </div>`;
             }
             
         }
     };
+}
+
+// Clear Results from the site
+function clearResult () {
+    resultDiv.classList.replace("hide", "show");
+    resultDiv.innerHTML = "";
 }
 // To singularize a word if it not found in the JSON Data.
 function singularize(word) {
@@ -109,4 +131,6 @@ function singularize(word) {
         r => endings[r]
     );
 }
+
+
 searchButton.addEventListener("click", searchDestination);

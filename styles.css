@@ -306,14 +306,54 @@ aside {
 }
 
 /* Search Condition values */
+
 .hide {
     display: none;
 }
 
 .show {
-    display: relative;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    padding: 1rem 2rem;
+    justify-content: space-around;
+    width: 100%;
+    position: relative;
+    height: auto;
+}
+
+.dest-card {
+    background-color: white;
+    padding-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 5px 7px rgba(255,255,255,0.3);
+    width: 50%;
+    margin: 2rem;
+    
+}
+
+.dest-card h3 {
+    color: black;
+    padding: 1rem 0.5rem;
+}
+
+.dest-card p {
+    color: grey;
+    font-size: small !important;
+    padding: 0 !important;
+    margin: 0.5rem;
+}
+
+.dest-card button {
+    padding: 0.5rem 1rem !important;
+    margin: 0.5rem;
 }
 #result img {
-    max-width: 200px;
-    max-height: 200px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: inherit;
+    /* box-sizing: inherit; */
 }
