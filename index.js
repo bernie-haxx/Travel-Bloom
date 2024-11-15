@@ -23,6 +23,7 @@ function searchDestination() {
             // Value Checker
             if (searchText.length == 0) {
                 console.log("Please Insert Text");
+                resultDiv.classList.replace("hide", "show");
                 resultDiv.innerHTML += `<div class="dest-card">
                                             <p>Enter a valid Destination</p>
                                         </p>`;
@@ -38,6 +39,7 @@ function searchDestination() {
                 searchList = [];
             } else {
                 console.log("Enter a valid Destination");
+                resultDiv.classList.replace("hide", "show");
                 resultDiv.innerHTML += `<div class="dest-card">
                                             <p>Destination or Keyword Not Found</p>
                                         </p>`;
