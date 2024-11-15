@@ -24,7 +24,7 @@ function searchDestination() {
             if (searchText.length == 0) {
                 console.log("Please Insert Text");
                 resultDiv.classList.replace("hide", "show");
-                resultDiv.innerHTML += `<div class="dest-card">
+                resultDiv.innerHTML = `<div class="dest-card">
                                             <p>Enter a valid Destination</p>
                                         </p>`;
                 return;
@@ -40,7 +40,7 @@ function searchDestination() {
             } else {
                 console.log("Enter a valid Destination");
                 resultDiv.classList.replace("hide", "show");
-                resultDiv.innerHTML += `<div class="dest-card">
+                resultDiv.innerHTML = `<div class="dest-card">
                                             <p>Destination or Keyword Not Found</p>
                                         </p>`;
                 return;
@@ -121,7 +121,7 @@ function displayResult (destination) {
 
 // Clear Results from the site
 function clearResult () {
-    resultDiv.classList.replace("hide", "show");
+    resultDiv.classList.replace("show", "hide");
     resultDiv.innerHTML = "";
 }
 
