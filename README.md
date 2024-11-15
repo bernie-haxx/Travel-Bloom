@@ -6,6 +6,11 @@ This is a travel Recommendation Website created for the IBM Skills Network Cours
 
 ![home-page](./images/home_page.png)
 
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+
 ## Tasks Done
 - Task 1: HTML template
     - Create a basic HTML template structure in the travel_recommendation.html file
@@ -47,6 +52,6 @@ This is a travel Recommendation Website created for the IBM Skills Network Cours
         - Through temple:
         ![temple-input](./images/temple.png)
         - Through country name:
-        ![japan-input](./images/beaches.png)
+        ![japan-input](./images/japan.png)
         - Through `any destination` name:
-        ![any-input](./images/beaches.png)
+        ![any-input](./images/any.png)
